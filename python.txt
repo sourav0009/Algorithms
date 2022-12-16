@@ -1,0 +1,75 @@
+7. Write a program with a function that accepts a string from keyboard and create a new string after converting character of each word capitalized. 
+For instance, if the sentence is "stop and smell the roses." the output should be "Stop And Smell The Roses
+
+->
+
+my_string = "StopAndSmellTheRoses"
+i = 0
+result = ""
+for c in my_string:
+    if c.isupper() and i > 0:
+        result += " "
+        result += c.lower()
+    else:
+        result += c
+    i += 1
+
+print (result)
+
+############################
+
+9. Write a program to add two matrices of size n x m
+
+# Program to add two matrices using nested loop
+
+X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+
+Y = [[5,8,1],
+    [6,7,3],
+    [4,5,9]]
+
+result = [[0,0,0],
+         [0,0,0],
+         [0,0,0]]
+
+
+->
+
+for i in range(len(X)):
+   for j in range(len(X[0])):
+       result[i][j] = X[i][j] + Y[i][j]
+
+for r in result:
+   print(r)
+
+   ###########################################
+
+#   10. Write a program to multiply two matrices
+
+X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+
+Y = [[5,8,1,2],
+    [6,7,3,0],
+    [4,5,9,1]]
+
+result = [[0,0,0,0],
+         [0,0,0,0],
+         [0,0,0,0]]
+->
+
+for i in range(len(X)):
+  
+   for j in range(len(Y[0])):
+
+       for k in range(len(Y)):
+           result[i][j] += X[i][k] * Y[k][j]
+
+for r in result:
+   print(r)
+
+
+###########################################
